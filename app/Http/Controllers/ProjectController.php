@@ -2,10 +2,10 @@
     
 namespace App\Http\Controllers;
     
-use App\Models\Project;
+use App\Models\project;
 
-use App\Models\projectUser;
-use App\Models\projectuser as ModelsProjectuser;
+
+use App\Models\projectuser;
 use App\Models\User;
 use Illuminate\Http\Request;
     
@@ -47,7 +47,7 @@ class ProjectController extends Controller
        
         foreach($request->user as $usersv)
          {
-            Projectuser::create(['project_id'=>$projectid->id,'user_id'=>(int)$usersv]);
+            projectuser::create(['project_id'=>$projectid->id,'user_id'=>(int)$usersv]);
             
          }
         
